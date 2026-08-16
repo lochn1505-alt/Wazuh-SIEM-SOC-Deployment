@@ -1,0 +1,3 @@
+# Giám sát lời gọi hệ thống execve (thực thi chương trình) cho User ID 1000
+-a exit,always -F auid=1000 -F egid!=994 -F auid!=-1 -F arch=b32 -S execve -k audit-wazuh-c
+-a exit,always -F auid=1000 -F egid!=994 -F auid!=-1 -F arch=b64 -S execve -k audit-wazuh-c
